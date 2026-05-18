@@ -23,7 +23,7 @@ modelo_tree = joblib.load("modelos/modelo_tree.pkl")
 st.title("🚢 Titanic Survival Predictor")
 
 st.markdown("### 👩‍🎓 Daniela Esther Paucar Chavez")
-st.markdown("**NRC:** 6816")
+st.markdown("NRC: 6816")
 
 st.markdown("### 📚 Colab (modo lectura)")
 st.markdown("https://colab.research.google.com/drive/17LDmXjnCHvVJ2s43xYyd1kSb5_PZ78Ui?usp=sharing")
@@ -40,12 +40,12 @@ col1, col2 = st.columns(2)
 with col1:
     pclass = st.selectbox("Clase del pasajero (Pclass)", [1, 2, 3])
     age = st.slider("Edad", 0, 80, 25)
-    sibsp = st.number_input("SibSp (hermanos/esposo)", 0, 10, 0)
+    sibsp = st.number_input("SibSp (Número de hermanos o esposos/esposas que viajaban con el pasajero)", 0, 10, 0)
 
 with col2:
-    parch = st.number_input("Parch (padres/hijos)", 0, 10, 0)
+    parch = st.number_input("Parch (Número de padres o hijos que viajaban con el pasajero)", 0, 10, 0)
     fare = st.number_input("Tarifa pagada", 0.0, 600.0, 50.0)
-    sex = st.selectbox("Sexo", ["male", "female"])
+    sex = st.selectbox("Sexo", ["Male(Masculino)", "Female(Femenino)"])
     embarked = st.selectbox("Puerto de embarque", ["S", "C", "Q"])
 
 # =========================
@@ -91,10 +91,10 @@ if st.button("🔍 Predecir supervivencia"):
 
     # Resultado
     if pred == 1:
-        st.success("🎉 El pasajero PROBABLEMENTE SOBREVIVIRÍA")
-        st.balloons()
+        st.success("🎉 El pasajero SOBREVIVIRÍA")
+        st.snow()
     else:
-        st.error("⚠️ El pasajero PROBABLEMENTE NO SOBREVIVIRÍA")
+        st.error("⚠️ El pasajero NO SOBREVIVIRÍA")
 
 # =========================
 # FOOTER
