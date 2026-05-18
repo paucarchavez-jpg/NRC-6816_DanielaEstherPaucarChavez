@@ -38,9 +38,9 @@ st.header("🧾 Datos del pasajero")
 col1, col2 = st.columns(2)
 
 with col1:
-    pclass = st.selectbox("Clase del pasajero (Pclass)", [1, 2, 3])
+    pclass = st.selectbox("Pclass (Clase del pasajero)", [1, 2, 3])
     age = st.slider("Edad", 0, 80, 25)
-    sibsp = st.number_input("SibSp (Número de hermanos o esposos/esposas que viajaban con el pasajero)", 0, 10, 0)
+    sibsp = st.number_input("SibSp (Número de hermanos o esposo/esposa que viajaban con el pasajero)", 0, 10, 0)
 
 with col2:
     parch = st.number_input("Parch (Número de padres o hijos que viajaban con el pasajero)", 0, 10, 0)
@@ -92,9 +92,10 @@ if st.button("🔍 Predecir supervivencia"):
     # Resultado
     if pred == 1:
         st.success("🎉 El pasajero SOBREVIVIRÍA")
-        st.snow()
+        st.balloons()
     else:
         st.error("⚠️ El pasajero NO SOBREVIVIRÍA")
+        st.snow()
 
 # =========================
 # FOOTER
