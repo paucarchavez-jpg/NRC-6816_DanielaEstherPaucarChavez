@@ -1,0 +1,32 @@
+Crear una aplicación web interactiva en Streamlit para predecir la supervivencia de pasajeros del Titanic utilizando modelos de machine learning entrenados previamente y guardados en formato .pkl.
+
+La aplicación debe tener una interfaz moderna, visual y fácil de usar. Debe incluir un título atractivo, descripciones claras y una organización ordenada de los elementos en pantalla.
+
+El usuario debe poder ingresar características del pasajero mediante componentes interactivos como sliders, selectbox y number_input. Las variables a ingresar son:
+
+- Clase del pasajero (Pclass)
+- Edad
+- Número de hermanos o esposo/esposa que viajaban con el pasajero. (SibSp)
+- Número de padres o hijos que viajaban con el pasajero. (Parch)
+- Tarifa pagada (Fare)
+- Sexo
+- Puerto de embarque
+
+La aplicación debe transformar automáticamente las variables categóricas utilizando la misma lógica aplicada durante el procesamiento de datos en Google Colab.
+
+Además, debe cargar el modelo entrenado desde la carpeta “modelos” usando joblib y mostrar una predicción clara indicando si el pasajero probablemente sobreviviría o no.
+
+La interfaz debe incluir:
+- Emojis o íconos visuales
+- Mensajes de éxito o advertencia
+- Diseño limpio y moderno
+- Explicaciones breves para el usuario
+- Sidebar para navegación o información adicional
+
+También debe mostrar:
+- Un link de Colab :https://colab.research.google.com/drive/17LDmXjnCHvVJ2s43xYyd1kSb5_PZ78Ui?usp=sharing
+- Nombre del estudiante:Daniela Esther Paucar Chavez
+- Código ISIL: NRC:6816
+- Enlace al notebook de Google Colab en modo lectura
+
+La aplicación no debe volver a entrenar el modelo, solo cargar el archivo .pkl previamente generado.
